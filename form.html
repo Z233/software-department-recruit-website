@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+    <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>软件部报名</title>
+
+    <link href="./css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+    <link href="./css/cover.css" rel="stylesheet">
+    <link href="./form.css" rel="stylesheet">
+
+    <style>
+        body {
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        }
+        nav {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+        }
+    </style>
+
+    <script>
+	window.onload = function () {
+		const submitBtn = document.querySelector("#submit");
+		submitBtn.addEventListener("click", function(){
+			
+		});
+	}
+    </script>
+
+    </head>
+
+    <body  class="d-flex align-items-center">
+        <nav class="nav nav-masthead d-flex  justify-content-end mt-3 mr-3">
+            <a class="nav-link" href="index.htm">首页</a>
+            <a class="nav-link active" href="form.html">报名</a>
+            <a class="nav-link" href="#">软件部WIKI</a>
+            <a class="nav-link" href="#">软件部OJ</a>
+        </nav>
+
+        <div action="" class="form-wrapper mr-auto ml-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="crad-title">填写报名表</h5>
+                    <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="name">姓名*</label>
+                            <span class="warning text-danger ml-1">该内容不能为空</span>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="studentid"">学号*</label>
+                            <input type="text" class="form-control" id="studentid" placeholder="Student ID">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="phone">电话*</label>
+                              <input type="tel" class="form-control" id="phone" placeholder="Phone number">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="email"">邮箱*</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="question1">在编程方面做过什么有趣的事情？*</label>
+                          <textarea rows="3" class="form-control" id="question1"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <label for="question2">为什么想要加入软件部？*</label>
+                          <textarea rows="3" class="form-control" id="question2"></textarea>
+                        </div>
+                       
+                        <button type="submit" class="btn btn-primary" id="submit">提交</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
