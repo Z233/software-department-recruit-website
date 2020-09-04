@@ -68,34 +68,34 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="crad-title">填写报名表</h5>
-                    <form id="form">
+                    <form id="form" action="AddStudentServlet" method="POST">
                         <div class="form-row">
                           <div class="form-group col-md-6">
                             <label for="name">姓名*</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name">
+                            <input type="text" class="form-control" name="sname" id="name" placeholder="Name">
                           </div>
                           <div class="form-group col-md-6">
                             <label for="studentid"">学号*</label>
-                            <input type="text" class="form-control" id="studentid" placeholder="Student ID">
+                            <input type="text" class="form-control" name="sno" id="studentid" placeholder="Student ID">
                           </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                               <label for="phone">电话*</label>
-                              <input type="tel" class="form-control" id="phone" placeholder="Phone number">
+                              <input type="tel" class="form-control" name="sphone" id="phone" placeholder="Phone number">
                             </div>
                             <div class="form-group col-md-6">
                               <label for="email"">邮箱*</label>
-                              <input type="email" class="form-control" id="email" placeholder="Email">
+                              <input type="email" class="form-control" name="semail" id="email" placeholder="Email">
                             </div>
                         </div>
                         <div class="form-group">
                           <label for="question1">在编程方面做过什么有趣的事情？*</label>
-                          <textarea rows="3" class="form-control" id="question1"></textarea>
+                          <textarea rows="3" class="form-control" name="squestion1" id="question1"></textarea>
                         </div>
                         <div class="form-group">
                           <label for="question2">为什么想要加入软件部？*</label>
-                          <textarea rows="3" class="form-control" id="question2"></textarea>
+                          <textarea rows="3" class="form-control" name="squestion2" id="question2"></textarea>
                         </div>
                        
                         <button type="submit" class="btn btn-primary" id="submit">提交</button>
