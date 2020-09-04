@@ -38,8 +38,13 @@ body {
 /* NAV */
 
 nav {
-  align-self: end;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}
+
+@media only screen and (min-width: 500px) {
+  nav {
+    justify-content: flex-end;
+  }
 }
 
 .nav-masthead .nav-link {
