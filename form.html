@@ -15,10 +15,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@yuuza/webfx@1.3.5/dist/webfx.min.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-      /** @type {HTMLButtonElement} */
-      const submitBtn = document.getElementById('submit');
       /** @type {HTMLFormElement} */
       const form = document.getElementById('form');
+
+      function updateState() {
+        document.getElementById('groupCodingExp').hidden = !document.getElementById('haveCoded').checked;
+      }
+      updateState();
+      document.getElementById('haveCoded').addEventListener('change', updateState);
 
       form.onsubmit = function () {
         let hasError = false;
@@ -28,9 +32,17 @@
         });
 
         document.querySelectorAll(".form-group").forEach(function (group) {
-          const label = group.firstElementChild;
+          let label = group.querySelector('.form-group > label');
           /** @type {HTMLInputElement | HTMLTextAreaElement} */
-          const input = label.nextElementSibling;
+          let input = group.querySelector('.form-group > input, .form-group > textarea');
+          if (group.id == 'groupHaveCoded') {
+            return;
+          } else if (group.id == 'groupCodingExp') {
+            if (document.getElementById('haveCoded').checked == false) {
+              input.value = '';
+              return;
+            }
+          }
           var error = '';
           if (!input.value) {
             error = '该内容不能为空';
@@ -85,7 +97,13 @@
                           <input type="email" class="form-control" name="semail" id="email" placeholder="Email">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="groupHaveCoded">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="haveCoded">
+                        <label class="custom-control-label" for="haveCoded">是否接触过编程</label>
+                      </div>
+                    </div>
+                    <div class="form-group" id="groupCodingExp">
                       <label for="question1">在编程方面做过什么有趣的事情？*</label>
                       <textarea rows="3" class="form-control" name="squestion1" id="question1"></textarea>
                     </div>
