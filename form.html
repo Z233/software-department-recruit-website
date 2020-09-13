@@ -11,6 +11,11 @@
         .warning {
             font-size: 15px;
         }
+
+        #imgCheckcode {
+          height: 100%;
+          vertical-align: middle;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/@yuuza/webfx@1.3.5/dist/webfx.min.js"></script>
     <script>
@@ -34,7 +39,7 @@
         document.querySelectorAll(".form-group").forEach(function (group) {
           let label = group.querySelector('.form-group > label');
           /** @type {HTMLInputElement | HTMLTextAreaElement} */
-          let input = group.querySelector('.form-group > input, .form-group > textarea');
+          let input = group.querySelector('.form-group input, .form-group textarea');
           if (group.id == 'groupHaveCoded') {
             return;
           } else if (group.id == 'groupCodingExp') {
@@ -58,6 +63,33 @@
 
         return !hasError;
       };
+
+      /** @type{HTMLInputElement} */
+      var checkcode = document.getElementById('checkcode');
+      /** @type{HTMLImageElement} */
+      var imgCheckcode = document.getElementById('imgCheckcode');
+      var checkcodeVer = 0;
+
+      checkcode.addEventListener('change', function (ev) {
+        webfx.utils.toggleClass(checkcode, 'is-valid', false);
+        webfx.utils.toggleClass(checkcode, 'is-invalid', false);
+        const ver = ++checkcodeVer;
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'text';
+        xhr.onload = function (e) {
+          if (ver != checkcodeVer) return;
+          const ok = xhr.responseText == 'true';
+          webfx.utils.toggleClass(checkcode, 'is-valid', ok);
+          webfx.utils.toggleClass(checkcode, 'is-invalid', !ok);
+        };
+        xhr.open('POST', 'api/checkcode');
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        xhr.send('checkcode=' + encodeURIComponent(checkcode.value));
+      });
+
+      imgCheckcode.addEventListener('click', function (ev) {
+        imgCheckcode.src = 'api/checkcode?t=' + new Date().getTime();
+      });
     });
     </script>
 
@@ -110,6 +142,17 @@
                     <div class="form-group">
                       <label for="question2">为什么想要加入软件部？*</label>
                       <textarea rows="3" class="form-control" name="squestion2" id="question2"></textarea>
+                    </div>
+                    <div class="form-group" id="groupCheckcode">
+                      <label for="checkcode">验证码*</label>
+                      <div class="row">
+                        <div class="col-6 col-md-4">
+                          <input type="text" class="form-control" name="checkcode" id="checkcode">
+                        </div>
+                        <div class="col-6 col-md-8">
+                          <img src="api/checkcode" id="imgCheckcode" alt="（验证码）" title="点击刷新">
+                        </div>
+                      </div>
                     </div>
                 </div>
                 <div class="card-footer clearfix">

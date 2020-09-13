@@ -41,12 +41,16 @@
     </footer>
     <script>
         (function () {
-            var ok = window.location.hash == '#ok';
-            if (ok) {
+            if (window.location.hash == '#ok') {
                 document.getElementById('bigTitle').textContent = '报名成功';
-            } else {
+            } else if (window.location.hash == '#wrong-checkcode') {
+                document.getElementById('bigTitle').textContent = '验证码错误';
+            } else if (window.location.hash == '#fail') {
                 document.getElementById('bigTitle').textContent = '报名失败';
                 document.getElementById('msg').textContent = '该学号对应的记录已存在，请联系管理员。';
+            } else {
+                document.getElementById('bigTitle').textContent = '未知错误';
+                document.getElementById('msg').textContent = '请联系管理员。';
             }
         })();
     </script>
