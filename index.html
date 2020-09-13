@@ -9,44 +9,64 @@
 		
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
 		<link href="./css/index.css" rel="stylesheet">
-		<link href="./css/animate.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/@yuuza/webfx@1.3.5/dist/webfx.min.js" async defer></script>
-		
+		<!-- Animate -->
+		<link href="./css/animate.min.css" rel="stylesheet">
+		<!-- slidePage -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.css">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lipten/slidePage/dist/slidePage.min.js"></script>
+
 		<style>
 			body {
 				text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 			}
 		</style>
+
 	</head>
 
-	<body  class="d-flex flex-column">
-		<nav class="nav nav-masthead d-flex m-3">
+	<body>
+		<nav class="nav nav-masthead d-flex mr-3 mt-3">
 			<a class="nav-link active" href="index.html">首页</a>
 			<a class="nav-link" href="form.html">报名</a>
 			<a class="nav-link" href="https://wiki.dsstudio.tech/">软件部 WIKI</a>
 			<a class="nav-link" href="https://oj.dsstudio.tech/">软件部 OJ</a>
 		</nav>
 
-		<main>
-			<div class="col-md-8 col-sm-10 mx-auto text-center">
-				<h1 class="text-white">欢迎加入软件部</h1>
-				<p class="lead text-white">软件部隶属于桂电创新创业基地，致力于软件方面的学习和开发。现有的学习方向有Web、Android、游戏、嵌入式，期待您的加入！</p>
-				<p class="lead">
-					<a href="form.html" class="btn btn-lg btn-secondary">立即报名</a>
-				</p>
+		<div class="scroll-nav mr-3">
+			<a href="#" class="item"></a>
+			<a href="#" class="item"></a>
+			<a href="#" class="item"></a>
+		</div>
+
+		<div class="slide-container" id="slidePage-container">
+			<div class="slide-page page1">
+				<div class="container d-flex flex-column">
+					<div class="col-md-8 col-sm-10 mx-auto text-center">
+						<h1 class="text-white">欢迎加入软件部</h1>
+						<p class="lead text-white">软件部隶属于桂电创新创业基地，致力于软件方面的学习和开发。现有的学习方向有Web、Android、游戏、嵌入式，期待您的加入！</p>
+						<p class="lead">
+							<a href="form.html" class="btn btn-lg btn-secondary">立即报名</a>
+						</p>
+					</div>
+					<div class="hint text-white text-center">
+						<span class="gg-chevron-down"></span>
+						下拉了解更多
+					</div>
+				</div>
 			</div>
-			<div class="hint text-white text-center">
-				<span class="gg-chevron-down"></span>
-				下拉了解更多
+			<div class="slide-page page2">
+				<div>
+					content ...
+				</div>
 			</div>
-			<div class="scroll-nav mr-3">
-				<a href="#" class="item"></a>
-				<a href="#" class="item"></a>
-				<a href="#" class="item"></a>
-			</div>
-		</main>
+		</div>
+
 		<footer class="text-muted m-2">
 			© 2020
 		</footer>
+
+		<script type="text/javascript">
+			var slidepage = new slidePage();
+		</script>
 	</body>
 </html>
