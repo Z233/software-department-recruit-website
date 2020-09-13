@@ -71,16 +71,14 @@
       var checkcodeVer = 0;
 
       checkcode.addEventListener('change', function (ev) {
-        webfx.utils.toggleClass(checkcode, 'is-valid', false);
-        webfx.utils.toggleClass(checkcode, 'is-invalid', false);
+        setValidState(checkcode, null);
         const ver = ++checkcodeVer;
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'text';
         xhr.onload = function (e) {
           if (ver != checkcodeVer) return;
           const ok = xhr.responseText == 'true';
-          webfx.utils.toggleClass(checkcode, 'is-valid', ok);
-          webfx.utils.toggleClass(checkcode, 'is-invalid', !ok);
+          setValidState(checkcode, ok);
         };
         xhr.open('POST', 'api/checkcode');
         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -90,6 +88,11 @@
       imgCheckcode.addEventListener('click', function (ev) {
         imgCheckcode.src = 'api/checkcode?t=' + new Date().getTime();
       });
+
+      function setValidState(element, valid) {
+        webfx.utils.toggleClass(element, 'is-valid', valid == true);
+        webfx.utils.toggleClass(element, 'is-invalid', valid == false);
+      }
     });
     </script>
 
