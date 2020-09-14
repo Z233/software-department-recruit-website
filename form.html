@@ -86,8 +86,13 @@
       });
 
       imgCheckcode.addEventListener('click', function (ev) {
-        imgCheckcode.src = 'api/checkcode?t=' + new Date().getTime();
+        refreshCheckCode();
       });
+
+      function refreshCheckCode(){
+        imgCheckcode.src = 'api/checkcode?t=' + new Date().getTime();
+      }
+      refreshCheckCode();
 
       function setValidState(element, valid) {
         webfx.utils.toggleClass(element, 'is-valid', valid == true);
@@ -153,7 +158,7 @@
                           <input type="text" class="form-control" name="checkcode" id="checkcode">
                         </div>
                         <div class="col-6 col-md-8">
-                          <img src="api/checkcode" id="imgCheckcode" alt="（验证码）" title="点击刷新">
+                          <img src="" id="imgCheckcode" alt="（验证码）" title="点击刷新">
                         </div>
                       </div>
                     </div>
