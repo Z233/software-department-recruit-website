@@ -152,7 +152,7 @@ nav {
  * Pages
  */
 
-.page1, .page2, .page3 {
+.page1, .page2 {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -234,24 +234,25 @@ nav {
 
 .page3-container {
   width: 85%;
-  max-width: 45em;
+  max-width: 880px;
   margin: 0 auto;
-  margin-top: 15em;
+  margin-top: 5em;
 }
 
 .works-container {
   background: #fff; 
-  display: grid;
-  justify-content: space-around;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 1.5em;
   border-radius: 1rem;
-  padding: 2em;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.works {
+  width: 280px;
+  margin: 5px;
 }
 
 .works img {
-  width: 300px;
-  background: salmon;
+  width: 100%;
 }
 
 .works-title {
