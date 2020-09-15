@@ -4,5 +4,8 @@ $(function (){
         columnWidth: 290,
         itemSelector: '.works',
         isFitWidth: true
-    })
+    });
+    $container.imagesLoaded().progress( function() {
+        $container.masonry('layout');
+      });
 });
