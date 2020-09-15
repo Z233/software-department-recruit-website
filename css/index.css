@@ -130,6 +130,7 @@ nav {
 .indexpage footer {
   position: fixed;
   bottom: 0;
+  font-size: 18px;
 }
 
 /* SCROLL NAV */
