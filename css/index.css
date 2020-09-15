@@ -57,6 +57,12 @@ a:hover {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
+/* Rounded */
+
+.rounded {
+  border-radius: 1rem !important;
+}
+
 /*
  * Base structure
  */
@@ -163,15 +169,19 @@ nav {
   opacity: 100%;
 }
 
-/* PAGE 1 */
+/*
+ * Pages
+ */
 
-.page1 {
+.page1, .page2, .page3 {
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
 }
+
+/* PAGE 1 */
 
 .page1 .hint {
   position: relative;
@@ -185,14 +195,6 @@ nav {
 
 
 /* PAGE 2 */
-
-.page2 {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-}
 
 .card {
   overflow: hidden;
@@ -258,8 +260,39 @@ nav {
   }
 }
 
-.rounded {
-  border-radius: 1rem !important;
+/* PAGE 3 */
+
+.page3-container {
+  width: 85%;
+  max-width: 45em;
+  margin: 0 auto;
+}
+
+.works-container {
+  background: #fff; 
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 1.5em;
+  border-radius: 1rem;
+  padding: 2em;
+}
+
+.img-placeholder {
+  width: 300px;
+  height: 220px;
+  background: salmon;
+}
+
+.works-title {
+  margin-top: 16px;
+  color: #393a49;
+  font-size: 22px;
+}
+
+.works-intro {
+  color: #acadb8;
+  font-size: 18px;
 }
 
 /* ICONS */
