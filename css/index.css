@@ -79,7 +79,7 @@ html.indexpage, .indexpage body {
 body {
   background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-
+  padding-bottom: 30px;
 }
 
 main {
@@ -143,9 +143,10 @@ nav {
 
 /* FOOTER */
 .indexpage footer {
-  position: fixed;
-  bottom: 0;
   font-size: 18px;
+  line-height: 18px;
+  position: relative;
+  margin-top: 5px;
 }
 
 /*
