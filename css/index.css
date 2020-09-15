@@ -139,36 +139,6 @@ nav {
   font-size: 18px;
 }
 
-/* SCROLL NAV */
-.scroll-nav {
-  position: fixed;
-  right: 0;
-  z-index: 1;
-  top: 50%;
-  margin-top: -31px;
-}
-
-.scroll-nav .item {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs,1));
-  width: 14px;
-  height: 14px;
-  border: 3px solid white;
-  border-radius: 100px;
-  opacity: 70%;
-  box-shadow: 0 0 3px;
-}
-
-.scroll-nav .item:not(:first-child) {
-  margin-top: 10px;
-}
-
-.scroll-nav .item:hover {
-  opacity: 100%;
-}
-
 /*
  * Pages
  */
