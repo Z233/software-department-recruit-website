@@ -245,6 +245,8 @@ nav {
   border-radius: 1rem;
   padding: 1em;
   margin: 0 auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
 }
 
 .works {
