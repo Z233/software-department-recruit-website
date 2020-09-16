@@ -235,9 +235,10 @@ nav {
 
 .page3-container {
   width: 85%;
-  max-width: 880px;
+  max-width: 928px;
   margin: 0 auto;
   margin-top: 5em;
+  box-sizing: content-box;
 }
 
 .works-container {
@@ -251,7 +252,7 @@ nav {
 
 .works {
   width: 280px;
-  margin: 5px;
+  margin: 10px;
 }
 
 .works img {
