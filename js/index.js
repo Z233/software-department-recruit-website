@@ -9,7 +9,9 @@ function initIndexPage() {
     $container.imagesLoaded().progress(function () {
         $container.masonry('layout');
     });
+    $("html, body").height(window.innerHeight);
 };
+
 
 document.addEventListener('DOMContentLoaded', function () {
     function createLink(text, href, newTab) {
