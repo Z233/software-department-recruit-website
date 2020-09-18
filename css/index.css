@@ -79,6 +79,10 @@ main {
   align-items: stretch;
 }
 
+/* Button */
+.btn {
+  text-shadow: none;
+}
 
 /* NAV */
 
