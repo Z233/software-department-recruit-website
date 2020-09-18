@@ -220,6 +220,16 @@ nav {
   z-index: 1;
 }
 
+.page2-container .split {
+  width: 100%;
+}
+
+@media screen and (min-width: 845px) {
+  .page2-container .split {
+    width: 0;
+  }
+}
+
 /* PAGE 3 */
 
 .page3-container {
