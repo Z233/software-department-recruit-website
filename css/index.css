@@ -96,10 +96,8 @@ nav {
   z-index: 1;
 }
 
-@media only screen and (min-width: 500px) {
-  nav {
-    justify-content: flex-end;
-  }
+nav {
+  justify-content: flex-end;
 }
 
 .nav-masthead .nav-link {
