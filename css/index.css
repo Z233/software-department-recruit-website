@@ -268,7 +268,11 @@ nav {
 
 .works-intro {
   color: #acadb8;
-  font-size: 18px;
+  font-size: 18px;  
+}
+
+.works-intro a {
+  color: #acadb8;
 }
 
 /* ICONS */
