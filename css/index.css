@@ -182,7 +182,7 @@ nav {
 
 .page2-container {
   width: 85%;
-  max-width: 90em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
@@ -191,7 +191,7 @@ nav {
 }
 
 .page2-container .card {
-  margin: .5em;
+  margin: .8em;
 }
 
 .indexpage .card-body {
