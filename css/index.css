@@ -159,7 +159,11 @@ nav {
   font-size: 16px;
 }
 
-
+.hint .gg-chevron-down {
+  top: 30px;
+  left: 50%;
+  margin-left: -12px;
+}
   
 /* PAGE 2 */
 
@@ -276,6 +280,83 @@ nav {
   text-decoration: underline;
 }
 
+/* FAQ PAGE */
+.faq-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.question-wrapper {
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 375px) {
+  .question-wrapper {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .question-wrapper {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .question-wrapper {
+    width: 50%;
+  }
+}
+
+
+.faq-wrapper .question-box {
+  margin: 0 auto;
+  border-radius: 10px;
+  border: #fff solid 2px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.question-box .top {
+  position: relative;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.question-box .question-text {
+  display: block;
+  line-height: 40px;
+  margin: 0 20px;
+  font-weight: 300;
+}
+
+.question-box .gg-chevron-down {
+  right: 20px;
+  top: 50%;
+  margin-top: -11px;
+}
+
+.question-box .bottom {
+  padding: 0 20px;
+  display: none;
+}
+
+.question-box .answer-text {
+  font-weight: 300;
+  font-size: 14px;
+  
+}
+
+.question-box .gg-chevron-down.expand {
+  transform: rotate(-90deg);
+}
+
 /* ICONS */
 
 .gg-chevron-down {
@@ -287,9 +368,6 @@ nav {
   height: 22px;
   border: 2px solid transparent;
   border-radius: 100px;
-  top: 30px;
-  left: 50%;
-  margin-left: -12px;
 }
 
 .gg-chevron-down::after {
@@ -305,3 +383,28 @@ nav {
   left: 4px;
   top: 2px;
 }
+
+.gg-chevron-right {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px
+ }
+ 
+ .gg-chevron-right::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  right: 6px;
+  top: 4px
+ } 

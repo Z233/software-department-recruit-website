@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta itemprop="name" content="软件部招新">
+    <meta name="description" content="桂林电子科技大学创新创业综合实践基地软件部宣传及报名网站">
+    <meta itemprop="image" content="./img/rjblogo.ico" />
+
+    <title>常见问题</title>
+    <link rel="shortcut icon" href="./img/rjblogo.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <link href="./css/index.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@yuuza/webfx@1.4.1/dist/webfx.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        $(document).ready(() => {
+            const v = $(".question-box > .top");
+            $(v).on("click", function() {
+                let e = $(this).children(".gg-chevron-down")[0];
+                let i = $(this).next(".bottom")[0];
+                console.log(i);
+                $(e).toggleClass("expand");
+                $(e).hasClass("expand") ? $(i).hide() : $(i).show();
+            });
+        });
+    </script>
+
+</head>
+<body class="d-flex flex-column">
+    <div class="faq-wrapper text-white">
+        <h3 class="text-center">常见问题</h3>
+        <div class="question-wrapper">
+            <div class="question-box">
+                <div class="top">
+                    <p class="question-text">软件部的招新流程是什么？</p>
+                    <span class="gg-chevron-down expand"></span>
+                </div>
+                <div class="bottom">
+                    <p class="answer-text">报名 > 参加 C 语言培训（可选） > 笔试 > 面试</p>
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="top">
+                    <p class="question-text">软件部是一个什么样的部门？</p>
+                    <span class="gg-chevron-down expand"></span>
+                </div>
+                <div class="bottom">
+                    <p class="answer-text">我们一群热爱学习与创造的人，在这里你可以找到属于你的学习方向，并结交一群志同道合的朋友。</p>
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="top">
+                    <p class="question-text">要怎么做才能加入软件部？</p>
+                    <span class="gg-chevron-down expand"></span>
+                </div>
+                <div class="bottom">
+                    <p class="answer-text">要能顺利加入软件部，最重要的莫过于在笔试当中取得一个不错的成绩。为达到此目标，需要你从下定决心加入软件部的一刻起，掌握至少一门编程语言，并且能解决软件部OJ里的大部分题目。如果在此之前你没有过任何编程经验，也请不要灰心，已经入部的部员们在大一时大多也和你一样。你需要做的是在笔试之前认真学习一门编程语言，一般来说是C语言。不要依赖于我们的培训，或者其他任何人，尽量靠自学，这样你会学到更多。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
