@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         child: [
             createLink('首页', 'index.html'),
             createLink('报名', 'form.html'),
-            createLink('常见问题', 'faq.html'),
+            createLink('FAQ', 'faq.html'),
             createLink('软件部WIKI', 'https://wiki.dsstudio.tech/', true),
             createLink('软件部OJ', 'https://oj.dsstudio.tech/', true),
         ]
